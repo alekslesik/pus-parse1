@@ -84,7 +84,7 @@ func writeNamesToResult(names [][]string, result string) error {
 	return nil
 }
 
-// write trains
+// writeTrainsToResult write trains to MSH_A_RESULT
 func writeTrainsToResult(trains [][]string) error {
 	const op = "writeTrainsToResult()"
 
@@ -159,7 +159,6 @@ func writeTrainsToResult(trains [][]string) error {
 	return nil
 }
 
-
 // addHeaders to every MSH_A_RESULT.DAT file
 func addHeaders() error {
 	const op = "addHeaders()"
@@ -196,7 +195,6 @@ func addHeaders() error {
 	return nil
 }
 
-
 // findIndexByTitle return index [index] from PLACE_NAMES_RESULT.DAT by name
 func findIndexByTitle(filename string, title string) (string, error) {
 	const op = "findIndexByTitle()"
@@ -227,7 +225,6 @@ func findIndexByTitle(filename string, title string) (string, error) {
 	log.Printf("%s: name '%s' is not found in file > %s", op, title, err)
 	return "", fmt.Errorf("name '%s' not found in file", title)
 }
-
 
 // addTails add 0,@@@@@@@@,@@@@@@@@,@@@,@@@,@@@,@@@,@@@@@; elements
 func addTails() error {
